@@ -1,12 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+  const dotenv = require("dotenv")
 const app = express();
 const userController = require("./controllers/user.controller")
 const bookController = require("./controllers/books.controller")
 
+dotenv.config();
+
 mongoose
-  .connect("mongodb+srv://singh202:Anurag1234@cluster0.bxefk.mongodb.net/books")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("connected");
   })
