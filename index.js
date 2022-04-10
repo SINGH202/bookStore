@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
-const userController = require("./controllers/user.controller")
-const bookController = require("./controllers/books.controller")
+const userController = require("./src/controllers/user.controller")
+const bookController = require("./src/controllers/books.controller")
 
 mongoose
   .connect("mongodb+srv://singh202:Anurag1234@cluster0.bxefk.mongodb.net/books")
